@@ -20,9 +20,7 @@ spec:
       containers:
       - name: backend
         image: k8s-hands-on
-        ports:
-          - containerPort: 120
-
+        imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
 kind: Service
