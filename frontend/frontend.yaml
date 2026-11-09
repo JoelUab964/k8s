@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: frontend-k8s-hands-on:v1
+        image: frontend-k8s-hands-on
         imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
