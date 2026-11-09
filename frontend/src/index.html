@@ -1,14 +1,15 @@
-
 <div id="id01"></div>
+
+<img src="https://1000logos.net/wp-content/uploads/2022/07/Kubernetes-Logo.png">
 
 <script>
 var xmlhttp = new XMLHttpRequest();
-var url = "http://backend-k8s-hands-on";
+var url = "http://192.168.24.37:8081";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var resp= JSON.parse(this.responseText);
-        document.getElementById("id01").innerHTML = "<h2> la hora es " + resp.time + "</h2>";
+        document.getElementById("id01").innerHTML ="<h2> la hora es " + resp.time + " y el hostname es " + resp.hostname + "</h2>";
     }
 };
 
