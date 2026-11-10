@@ -11,3 +11,51 @@ metadata:
   name: prod
   labels:
     name: prod
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-dev
+  Namespace: dev
+  labels:
+    app: front
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-prod
+  Namespace: prod
+  labels:
+    app: back
+spec:
+  revisionHistoryLimit: 1
+  replicas: 5
+  selector:
+    matchLabels:
+      app: back
+  template:
+    metadata:
+      labels:
+        app: back
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+
+
