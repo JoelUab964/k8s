@@ -17,7 +17,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment-dev
-  Namespace: dev
+  namespace: dev
   labels:
     app: front
 spec:
@@ -40,7 +40,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment-prod
-  Namespace: prod
+  namespace: prod
   labels:
     app: back
 spec:
