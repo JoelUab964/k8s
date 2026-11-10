@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: development
+  name: dev
   labels:
-    name: development
+    name: dev
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: development
+  name: prod
   labels:
-    name: development
+    name: prod
